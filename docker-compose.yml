@@ -10,7 +10,7 @@ services:
       - "3000:3000"
     networks:
     
-      - backend
+      - frontend
   backend:
   
     build: ./backend
@@ -23,6 +23,7 @@ services:
     networks: 
     
      - backend
+     - frontend
   
   mongo:
   
@@ -39,6 +40,7 @@ services:
 
 networks:
   backend:
+  frontend:
 
 volumes: 
   mongodb_data:
